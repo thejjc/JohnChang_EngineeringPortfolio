@@ -1,3 +1,11 @@
-theme: jekyll-theme-cayman
-title: John Chang's Engineering Portfolio
-description: A showcase of my engineering projects.
+title: "John Chang — Engineering Portfolio"
+description: "Aerospace and mechanical engineering case studies in propulsion, dynamics, and structures."
+url: "https://thejjc.github.io"
+baseurl: "/JohnChang_EngineeringPortfolio"
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

@@ -1,36 +1,28 @@
-# John Chang's Engineering Portfolio!
-An accumulation of engineering work est. 2023
+---
+title: "John Chang — Engineering Portfolio"
+permalink: /
+---
+
 # John Chang
-Purdue University Undergraduate (Expected Fall '26) 
-Purdue University Master's Aeronautics & Astronautics (Expected Spring '28) 
-*Bachelor of Science in Aeronautics and Astronautics Engineering specializing in propulsion and structural mechanics.*
+
+Aeronautics & Astronautics Engineering, Purdue University — Expected Fall '26. Specializing in propulsion and structural mechanics.
+
+I design and validate solid propulsion systems, spacecraft control systems, and supersonic aerostructures — working from first-principles theory through simulation and validation.
+
+**Contact:** [chang974@purdue.edu](mailto:chang974@purdue.edu) · [LinkedIn](https://www.linkedin.com/in/-john-chang/) · [GitHub](https://github.com/thejjc)
 
 ---
 
+## Case Studies
 
+**Solid Rocket Motor Nozzle Analysis**
+1D thermodynamic design, SolidWorks modeling, and ANSYS FEA validation of a conical nozzle under 5 MPa / 3000 K conditions.
+[View case study →]({{ '/project1/' | relative_url }})
 
-## About Me
+**Spacecraft Attitude Dynamics & Control**
+Rigid-body attitude control using DCM and Euler parameter kinematics, closed with a feedback control law.
+[View case study →]({{ '/project2/' | relative_url }})
 
-I am an engineering student passionate about Rocket Propulsion and Defense systems. My goal is to dive into deep space propulsions systems and advance space travel in the aerospace industry. This portfolio is the accumulation of my work and technical projects.
-
-# Relevant Links
-* **Email:** <a href="chang974@purdue.edu" target="_blank">chang974@purdue.edu</a>
-* **LinkedIn** <a href="https://www.linkedin.com/in/-john-chang/" target="_blank">My LinkedIn Profile</a>
-* **GitHub:** [My GitHub](https://github.com/thejjc)
-
----
-
-## My Projects
-
-Here are a few of the projects I am most proud of.
-
-* **Solid Rocket Motor Nozzle Analysis →** [View Project Details](project1.md)
-* **Spacecraft Attitude Dynamics & Control →** [View Project Details](project2.md)
-* **Supersonic Inlet Aerodynamics & Composite Structures →** [View Project Details](project3.md)
-
-
-
-
-
-**updated 10/31/2025
-**latest update 09/13/2026
+**Supersonic Inlet & Composite Structures**
+Method-of-Characteristics inlet design, CFD validation, and composite structural sizing for the housing.
+[View case study →]({{ '/project3/' | relative_url }})

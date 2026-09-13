@@ -1,61 +1,36 @@
-# Project: Solid Rocket Motor Nozzle Analysis
-
-[← Back to Main Page](/JohnChang_EngineeringPortfolio/)
-
+---
+title: "Solid Rocket Motor Nozzle Analysis"
+permalink: /project1/
 ---
 
-> **Quick Summary:** This project involved the complete design and analysis of a conical rocket nozzle. I used **MATLAB** for 1D thermodynamic calculations and **ANSYS** to perform a 2D Finite Element Analysis (FEA) to validate the structural and thermal integrity of the design.
+[← Index]({{ '/' | relative_url }})
 
+# Solid Rocket Motor Nozzle Analysis
 
+> **Summary:** Full design and validation of a conical rocket nozzle — 1D thermodynamic sizing in MATLAB, parametric modeling in SolidWorks, and structural/thermal FEA validation in ANSYS.
 
----
+## Objective
 
-### ## 🎯 The Problem & Objective
+Design a solid rocket motor nozzle for a conceptual sounding rocket, meeting thrust and exit-velocity targets while surviving 5 MPa chamber pressure and 3000 K gas temperature.
 
-The objective was to design a solid rocket motor nozzle for a conceptual sounding rocket. The design had to meet specific performance targets (like thrust and exit velocity) while being structurally sound under immense pressure (5 MPa) and extreme temperatures (3000 K).
+## Process
 
-My personal goal was to get hands-on experience with the full engineering analysis workflow, from initial theory to final simulation.
+#### Theory — MATLAB
+Solved the 1D isentropic flow equations to size the throat and exit areas, plot pressure, temperature, and velocity along the nozzle length, and predict thrust and specific impulse ($I_{sp}$).
 
----
+#### Modeling — SolidWorks
+Built a conical nozzle with a 15° divergence angle and a graphite throat insert, sized directly from the MATLAB results.
 
-### ## 🛠 My Process & Tools
+#### Validation — ANSYS
+Ran a structural analysis (von Mises stress under the calculated pressure load) and a steady-state thermal analysis (3000 K gas temperature with convective heat transfer) to confirm the design survives operating conditions.
 
-I broke the project down into three main phases:
+## Results
 
-#### 1. Theoretical Analysis (MATLAB)
+* **Thrust:** 8.5 kN — met the target
+* **Structural margin:** Factor of safety 2.8 against yield
+* **Thermal:** Graphite insert absorbed the majority of incident heat, protecting the outer casing
 
-First, I developed a **MATLAB** script to solve the 1D isentropic flow equations. This allowed me to:
-* Calculate the required throat and exit areas for ideal expansion.
-* Plot the expected pressure, temperature, and velocity of the gas along the nozzle's length.
-* Determine the theoretical thrust and specific impulse ($I_{sp}$).
+## Documentation
 
-#### 2. 3D Modeling (SolidWorks)
-
-Using the dimensions from my MATLAB script, I modeled a 3D component in **SolidWorks**. I designed a conical nozzle with a 15-degree divergence angle and included a graphite throat insert, as it's a common material for high-temperature applications.
-
-#### 3. Simulation & Validation (ANSYS)
-
-This was the most critical step. I used **ANSYS Mechanical** to verify my design.
-
-* **Structural Analysis:** I applied the calculated pressure profile from MATLAB as a load on the nozzle's inner walls to find the resulting von Mises stress.
-* **Thermal Analysis:** I ran a steady-state thermal analysis, applying the 3000 K gas temperature with a convective heat transfer coefficient to see how the heat would dissipate through the nozzle body.
-
----
-
-### ## 📈 The Results
-
-The project was a success and validated my design.
-
-* **Performance:** The MATLAB script predicted a thrust of 8.5 kN, meeting the project's requirements.
-* **Safety:** The FEA results showed that the maximum stress was well below the yield strength of the steel casing (Factor of Safety = 2.8).
-* **Thermal:** The thermal analysis confirmed that the graphite insert effectively absorbed the majority of the heat, protecting the outer structure.
-
-
-
-
----
-
-### ## 📚 Project Files & Documentation
-
-* **[View the MATLAB Script on GitHub](https://github.com/thejjc/JohnChang_EngineeringPortfolio/blob/main/nozzle_analysis.m)**
-* **[Download the Full Technical Report (PDF)](assets/Nozzle_Design_Report.pdf)**
+* [MATLAB script](https://github.com/thejjc/JohnChang_EngineeringPortfolio/blob/main/nozzle_analysis.m)
+* [Technical report (PDF)]({{ '/assets/Nozzle_Design_Report.pdf' | relative_url }})

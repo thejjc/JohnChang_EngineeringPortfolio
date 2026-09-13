@@ -1,54 +1,35 @@
-# Project: Spacecraft Attitude Dynamics & Control
-
-[← Back to Main Page](/)
-
+---
+title: "Spacecraft Attitude Dynamics & Control"
+permalink: /project2/
 ---
 
-> **Quick Summary:** [One or two sentences on the spacecraft/mission context — what body was being controlled, and toward what goal (e.g. pointing accuracy, detumbling, slew maneuver).]
+[← Index]({{ '/' | relative_url }})
 
----
+# Spacecraft Attitude Dynamics & Control
 
-### ## 🎯 The Problem & Objective
+> **Summary:** [One sentence — mission context and control objective.]
 
-[What was the spacecraft supposed to do — reorient, track a target, reject a disturbance? What made this a non-trivial attitude control problem?]
+## Objective
 
-My personal goal was to [e.g. build a full attitude estimation and control pipeline from first principles, rather than relying on a black-box toolbox function].
+[What maneuver or pointing requirement drove this project — detumbling, slew, station-keeping? What made it a non-trivial control problem?]
 
----
+## Process
 
-### ## 🛠 My Process & Tools
+#### Kinematics
+Represented orientation using Direction Cosine Matrices and Euler parameters (quaternions) to avoid the singularities of Euler angles.
 
-#### 1. Kinematics (Direction Cosine Matrices & Euler Parameters)
+#### Dynamics
+Modeled the rigid-body rotational equations of motion from the spacecraft's inertia tensor.
 
-I represented spacecraft orientation using **Direction Cosine Matrices (DCM)** and **Euler parameters (quaternions)** to avoid the singularities of Euler angles. This let me:
-* [Propagate attitude over time given angular velocity]
-* [Convert between representations for different stages of the pipeline]
-* [State the singularity/gimbal-lock problem you were solving for]
+#### Control
+Designed a feedback control law — [specify type, e.g. PD control on quaternion error] — and tuned it in simulation against [disturbances or constraints considered].
 
-#### 2. Dynamics Modeling
+## Results
 
-I modeled the rigid-body rotational equations of motion (Euler's equations) using the spacecraft's inertia tensor to capture how applied torques translate into angular acceleration.
+* **Convergence:** [settling time / final pointing accuracy]
+* **Robustness:** [performance under disturbance torques or off-nominal initial conditions]
 
-#### 3. Feedback Control Design
+## Documentation
 
-I designed a **feedback control law** to drive the spacecraft to a target attitude:
-* [Control law type — e.g. PD control on quaternion error, or a specific nonlinear control law]
-* [How you tuned gains — simulation, pole placement, etc.]
-* [Disturbances or constraints considered — actuator saturation, sensor noise]
-
----
-
-### ## 📈 The Results
-
-* **Convergence:** [e.g. time to settle within X degrees of target attitude]
-* **Robustness:** [How the controller performed under disturbance torques or initial condition variation]
-* **Accuracy:** [Steady-state pointing error, overshoot, or other key metric]
-
-[Consider including a plot of attitude error vs. time, or angular velocity vs. time.]
-
----
-
-### ## 📚 Project Files & Documentation
-
-* **[View the MATLAB/Simulink Files on GitHub](https://github.com/thejjc/REPLACE-WITH-REPO-NAME)**
-* **[Download the Full Technical Report (PDF)](assets/Attitude_Control_Report.pdf)**
+* [Source files](https://github.com/thejjc/JohnChang_EngineeringPortfolio)
+* [Technical report (PDF)]({{ '/assets/Attitude_Control_Report.pdf' | relative_url }})
