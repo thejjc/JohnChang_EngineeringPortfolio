@@ -1,9 +1,8 @@
 ---
 title: "John Chang — Engineering Portfolio"
 permalink: /
+hero: true
 ---
-
-# John Chang
 
 Aeronautics & Astronautics Engineering, Purdue University — Expected Fall '26. Specializing in propulsion and structural mechanics.
 

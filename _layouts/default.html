@@ -21,6 +21,21 @@
   </nav>
 </header>
 
+{% if page.hero %}
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline
+    poster="{{ '/assets/video/hero-poster.jpg' | relative_url }}">
+    <source src="{{ '/assets/video/hero-placeholder.mp4' | relative_url }}" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner wrap">
+    <p class="hero-eyebrow mono">AEROSPACE &amp; MECHANICAL ENGINEERING</p>
+    <h1 class="hero-title">John Chang</h1>
+    <p class="hero-sub">Propulsion, dynamics, and structures — designed, simulated, and validated.</p>
+  </div>
+</section>
+{% endif %}
+
 <main class="wrap content" id="content">
 {{ content }}
 </main>
