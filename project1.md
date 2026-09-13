@@ -1,7 +1,6 @@
-
 # Project: Solid Rocket Motor Nozzle Analysis
 
-[← Back to Main Page](/)
+[← Back to Main Page](/JohnChang_EngineeringPortfolio/)
 
 ---
 
@@ -58,5 +57,5 @@ The project was a success and validated my design.
 
 ### ## 📚 Project Files & Documentation
 
-* **[View the MATLAB Script on GitHub](https://github.com/your-username/your-repo-name/blob/main/nozzle_analysis.m)**
+* **[View the MATLAB Script on GitHub](https://github.com/thejjc/JohnChang_EngineeringPortfolio/blob/main/nozzle_analysis.m)**
 * **[Download the Full Technical Report (PDF)](assets/Nozzle_Design_Report.pdf)**

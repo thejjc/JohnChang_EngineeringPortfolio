@@ -1,7 +1,8 @@
 # John Chang's Engineering Portfolio!
 An accumulation of engineering work est. 2023
 # John Chang
-Purdue University Undergraduate (Expected Fall '26)  
+Purdue University Undergraduate (Expected Fall '26) 
+Purdue University Master's Aeronautics & Astronautics (Expected Spring '28) 
 *Bachelor of Science in Aeronautics and Astronautics Engineering specializing in propulsion and structural mechanics.*
 
 ---
@@ -23,12 +24,13 @@ I am an engineering student passionate about Rocket Propulsion and Defense syste
 
 Here are a few of the projects I am most proud of.
 
-* **[Project 1 Title] →** [View Project Details](project1.md)
-* **[Project 2 Title] →** [View Project Details](project2.md)
-* **[Project 3 Title] →** [View Project Details](project3.md)
+* **Solid Rocket Motor Nozzle Analysis →** [View Project Details](project1.md)
+* **Spacecraft Attitude Dynamics & Control →** [View Project Details](project2.md)
+* **Supersonic Inlet Aerodynamics & Composite Structures →** [View Project Details](project3.md)
 
 
 
 
 
-**latest update 10/31/2025 ...
+**updated 10/31/2025
+**latest update 09/13/2026
