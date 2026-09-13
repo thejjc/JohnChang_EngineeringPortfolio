@@ -1,62 +1,54 @@
-
-# Project: Solid Rocket Motor Nozzle Analysis
+# Project: Spacecraft Attitude Dynamics & Control
 
 [← Back to Main Page](/)
 
 ---
 
-> **Quick Summary:** This project involved the complete design and analysis of a conical rocket nozzle. I used **MATLAB** for 1D thermodynamic calculations and **ANSYS** to perform a 2D Finite Element Analysis (FEA) to validate the structural and thermal integrity of the design.
-
-
+> **Quick Summary:** [One or two sentences on the spacecraft/mission context — what body was being controlled, and toward what goal (e.g. pointing accuracy, detumbling, slew maneuver).]
 
 ---
 
 ### ## 🎯 The Problem & Objective
 
-The objective was to design a solid rocket motor nozzle for a conceptual sounding rocket. The design had to meet specific performance targets (like thrust and exit velocity) while being structurally sound under immense pressure (5 MPa) and extreme temperatures (3000 K).
+[What was the spacecraft supposed to do — reorient, track a target, reject a disturbance? What made this a non-trivial attitude control problem?]
 
-My personal goal was to get hands-on experience with the full engineering analysis workflow, from initial theory to final simulation.
+My personal goal was to [e.g. build a full attitude estimation and control pipeline from first principles, rather than relying on a black-box toolbox function].
 
 ---
 
 ### ## 🛠 My Process & Tools
 
-I broke the project down into three main phases:
+#### 1. Kinematics (Direction Cosine Matrices & Euler Parameters)
 
-#### 1. Theoretical Analysis (MATLAB)
+I represented spacecraft orientation using **Direction Cosine Matrices (DCM)** and **Euler parameters (quaternions)** to avoid the singularities of Euler angles. This let me:
+* [Propagate attitude over time given angular velocity]
+* [Convert between representations for different stages of the pipeline]
+* [State the singularity/gimbal-lock problem you were solving for]
 
-First, I developed a **MATLAB** script to solve the 1D isentropic flow equations. This allowed me to:
-* Calculate the required throat and exit areas for ideal expansion.
-* Plot the expected pressure, temperature, and velocity of the gas along the nozzle's length.
-* Determine the theoretical thrust and specific impulse ($I_{sp}$).
+#### 2. Dynamics Modeling
 
-#### 2. 3D Modeling (SolidWorks)
+I modeled the rigid-body rotational equations of motion (Euler's equations) using the spacecraft's inertia tensor to capture how applied torques translate into angular acceleration.
 
-Using the dimensions from my MATLAB script, I modeled a 3D component in **SolidWorks**. I designed a conical nozzle with a 15-degree divergence angle and included a graphite throat insert, as it's a common material for high-temperature applications.
+#### 3. Feedback Control Design
 
-#### 3. Simulation & Validation (ANSYS)
-
-This was the most critical step. I used **ANSYS Mechanical** to verify my design.
-
-* **Structural Analysis:** I applied the calculated pressure profile from MATLAB as a load on the nozzle's inner walls to find the resulting von Mises stress.
-* **Thermal Analysis:** I ran a steady-state thermal analysis, applying the 3000 K gas temperature with a convective heat transfer coefficient to see how the heat would dissipate through the nozzle body.
+I designed a **feedback control law** to drive the spacecraft to a target attitude:
+* [Control law type — e.g. PD control on quaternion error, or a specific nonlinear control law]
+* [How you tuned gains — simulation, pole placement, etc.]
+* [Disturbances or constraints considered — actuator saturation, sensor noise]
 
 ---
 
 ### ## 📈 The Results
 
-The project was a success and validated my design.
+* **Convergence:** [e.g. time to settle within X degrees of target attitude]
+* **Robustness:** [How the controller performed under disturbance torques or initial condition variation]
+* **Accuracy:** [Steady-state pointing error, overshoot, or other key metric]
 
-* **Performance:** The MATLAB script predicted a thrust of 8.5 kN, meeting the project's requirements.
-* **Safety:** The FEA results showed that the maximum stress was well below the yield strength of the steel casing (Factor of Safety = 2.8).
-* **Thermal:** The thermal analysis confirmed that the graphite insert effectively absorbed the majority of the heat, protecting the outer structure.
-
-
-
+[Consider including a plot of attitude error vs. time, or angular velocity vs. time.]
 
 ---
 
 ### ## 📚 Project Files & Documentation
 
-* **[View the MATLAB Script on GitHub](https://github.com/your-username/your-repo-name/blob/main/nozzle_analysis.m)**
-* **[Download the Full Technical Report (PDF)](assets/Nozzle_Design_Report.pdf)**
+* **[View the MATLAB/Simulink Files on GitHub](https://github.com/thejjc/REPLACE-WITH-REPO-NAME)**
+* **[Download the Full Technical Report (PDF)](assets/Attitude_Control_Report.pdf)**
